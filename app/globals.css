@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-inter: "Inter", Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --selection: rgba(255, 191, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: #fdfdfb;
+  color: #121212;
+  font-family: var(--font-inter);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: #ffbf00;
+}
+
+.ambient-grid {
+  background-image:
+    linear-gradient(rgba(18, 18, 18, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 18, 18, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.hero-radial {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(75, 0, 130, 0.12), transparent 32%),
+    radial-gradient(circle at 85% 18%, rgba(255, 191, 0, 0.12), transparent 28%),
+    radial-gradient(circle at 72% 85%, rgba(110, 125, 86, 0.1), transparent 34%),
+    #fdfdfb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
+
+.glass-panel {
+  background: rgba(253, 253, 251, 0.7);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.dark-panel {
+  background: #121212;
+  color: #fdfdfb;
+}
+
+.mono-table {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.border-grid {
+  display: grid;
+  border-top: 1px solid #d8d3c7;
+  border-left: 1px solid #d8d3c7;
+}
+
+.border-grid > * {
+  border-right: 1px solid #d8d3c7;
+  border-bottom: 1px solid #d8d3c7;
+}
+
+.technical-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #5f5a52;
+}
