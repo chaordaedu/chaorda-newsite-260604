@@ -1,15 +1,18 @@
 import {
   Activity,
+  Award,
   Brain,
   Building2,
   CircuitBoard,
   Code2,
   Database,
   FileText,
+  Globe,
   HeartPulse,
   LockKeyhole,
   LucideIcon,
   Network,
+  Rocket,
   ShieldCheck,
   Sparkles,
   UserCheck,
@@ -55,6 +58,45 @@ export const coreCapabilities: CardItem[] = [
     title: "Consent architecture",
     body: "Treat consent, modality controls, edge tokenization, audit trails, and deletion rights as part of the product layer.",
     icon: ShieldCheck
+  }
+];
+
+export const validationKPIs = [
+  { value: "3×", label: "Strategic Investments from CNTTECH" },
+  { value: "5+", label: "National Innovation Programs Awarded" },
+  { value: "Nationally", label: "Recognized Venture" }
+];
+
+export const ecosystemValidations: CardItem[] = [
+  {
+    title: "CNTTECH Strategic Investment",
+    body: "Three rounds of strategic investment from CNTTECH, Korea's premier accelerator, validating the technical and market thesis of Chaorda.",
+    icon: Building2
+  },
+  {
+    title: "TIPS Program Selection",
+    body: "Officially selected for the TIPS Program, South Korea's flagship government-backed technology commercialization and venture acceleration initiative.",
+    icon: Award
+  },
+  {
+    title: "National Innovation Portfolio",
+    body: "Selected for multiple government-funded innovation initiatives focused on commercializing next-generation AI infrastructure.",
+    icon: Zap
+  },
+  {
+    title: "Global Market Support",
+    body: "Designated for national-scale global expansion support by the Korean Government for high-potential technology ventures.",
+    icon: Globe
+  },
+  {
+    title: "Pre-TIPS Selection",
+    body: "Successfully completed the Pre-TIPS program, a prerequisite vetting phase for Korea's most competitive technology startups.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Accelerated Growth Track",
+    body: "Selected for and supported by Korea's most selective startup growth and commercialization programs.",
+    icon: Rocket
   }
 ];
 

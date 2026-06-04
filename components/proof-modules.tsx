@@ -1,5 +1,46 @@
 import { ArrowDown, CheckCircle2 } from "lucide-react";
-import { metrics } from "@/lib/content";
+import { metrics, validationKPIs, ecosystemValidations } from "@/lib/content";
+import { Section } from "./section";
+
+export function InstitutionalValidation() {
+  return (
+    <>
+      <div className="border-grid grid-cols-1 sm:grid-cols-3 bg-ink text-porcelain">
+        {validationKPIs.map((kpi) => (
+          <div key={kpi.label} className="p-8 text-center border-ink/10">
+            <p className="mono-table text-4xl font-bold tracking-tight text-white">{kpi.value}</p>
+            <p className="technical-label mt-2 text-porcelain/40">{kpi.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <Section
+        eyebrow="Trust & Authority"
+        title="Proven Through Institutional Recognition."
+        body="Chaorda's infrastructure and market thesis have been rigorously validated by Korea's leading venture capital and government innovation programs."
+      >
+        <div className="border-grid sm:grid-cols-2 lg:grid-cols-3">
+          {ecosystemValidations.map((item) => (
+            <article
+              key={item.title}
+              className="bg-porcelain p-6 flex flex-col justify-between min-h-[180px] transition-colors hover:bg-paper/30"
+            >
+              <div>
+                {item.icon && (
+                  <item.icon className="text-moss mb-4" size={24} />
+                )}
+                <h3 className="text-sm font-semibold text-ink uppercase tracking-wider">{item.title}</h3>
+                <p className="mt-3 text-xs leading-relaxed text-muted">
+                  {item.body}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+    </>
+  );
+}
 
 export function HumanLayerProblem() {
   const columns = [

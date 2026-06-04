@@ -6,6 +6,7 @@ import {
   BehaviorComparison,
   DataFlywheel,
   HumanLayerProblem,
+  InstitutionalValidation,
   MetricStrip
 } from "@/components/proof-modules";
 import { Section } from "@/components/section";
@@ -45,6 +46,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <InstitutionalValidation />
 
       <Section
         eyebrow="The Bottleneck"
