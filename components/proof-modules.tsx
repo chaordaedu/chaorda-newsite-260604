@@ -25,17 +25,25 @@ export function InstitutionalRoadmap() {
   );
 }
 
-export function InstitutionalValidation({ title = "Proven Through Institutional Recognition." }: { title?: string }) {
+export function InstitutionalValidation({
+  title = "Proven Through Institutional Recognition.",
+  showKPIs = true
+}: {
+  title?: string;
+  showKPIs?: boolean;
+}) {
   return (
     <>
-      <div className="border-grid grid-cols-1 sm:grid-cols-3 bg-ink text-porcelain">
-        {validationKPIs.map((kpi) => (
-          <div key={kpi.label} className="p-8 text-center border-ink/10">
-            <p className="mono-table text-4xl font-bold tracking-tight text-white">{kpi.value}</p>
-            <p className="technical-label mt-2 text-porcelain/40">{kpi.label}</p>
-          </div>
-        ))}
-      </div>
+      {showKPIs && (
+        <div className="border-grid grid-cols-1 sm:grid-cols-3 bg-ink text-porcelain">
+          {validationKPIs.map((kpi) => (
+            <div key={kpi.label} className="p-8 text-center border-ink/10">
+              <p className="mono-table text-4xl font-bold tracking-tight text-white">{kpi.value}</p>
+              <p className="technical-label mt-2 text-porcelain/40">{kpi.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <Section
         eyebrow="Trust & Authority"

@@ -23,23 +23,13 @@ export default function InvestorsPage() {
         eyebrow="Institutional IR"
         title="Where AI Innovation Meets Institutional Risk Discipline"
         body="Leveraging proprietary AI technology, venture validation, and South Korea's innovation ecosystem to build long-term enterprise value."
-      >
-        <div className="bg-porcelain p-6 shadow-polish ring-1 ring-boundary">
-          <p className="technical-label text-moss">Investor Thesis</p>
-          <p className="mt-4 text-sm leading-relaxed text-muted">
-            Designed for investors seeking exposure to next-generation AI infrastructure through structured, risk-conscious growth.
-          </p>
-          <div className="mt-8 flex flex-col gap-3">
-            <ButtonLink href="mailto:ir@chaorda.com">Request Investor Materials</ButtonLink>
-            <ButtonLink href="#" variant="secondary">
-              Access Institutional VDR
-            </ButtonLink>
-          </div>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION B: Institutional Validation */}
-      <InstitutionalValidation title="Validated by Korea's Innovation Ecosystem" />
+      <InstitutionalValidation
+        title="Validated by Korea's Innovation Ecosystem"
+        showKPIs={false}
+      />
 
       {/* SECTION C: Proprietary AI Assets & Enterprise Value */}
       <Section
@@ -132,12 +122,6 @@ export default function InvestorsPage() {
           <p className="mt-6 text-lg text-porcelain/60">
             We welcome discussions with institutional investors, private credit managers, family offices, and strategic partners seeking exposure to validated AI infrastructure opportunities.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <ButtonLink href="mailto:ir@chaorda.com">Request Investor Materials</ButtonLink>
-            <ButtonLink href="mailto:ir@chaorda.com" variant="ghost">
-              Contact Investor Relations
-            </ButtonLink>
-          </div>
           <p className="mt-8 text-xs text-porcelain/40 italic">
             Additional materials may be made available following an initial qualification process.
           </p>
