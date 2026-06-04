@@ -1,8 +1,31 @@
-import { ArrowDown, CheckCircle2 } from "lucide-react";
-import { metrics, validationKPIs, ecosystemValidations } from "@/lib/content";
+import { ArrowDown, ArrowRight, CheckCircle2 } from "lucide-react";
+import { metrics, validationKPIs, ecosystemValidations, roadmapSteps } from "@/lib/content";
 import { Section } from "./section";
 
-export function InstitutionalValidation() {
+export function InstitutionalRoadmap() {
+  return (
+    <div className="border-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      {roadmapSteps.map((item, index) => (
+        <div key={item.step} className="relative bg-porcelain p-6 flex flex-col justify-between min-h-[160px]">
+          <div>
+            <span className="technical-label text-clay/50">{item.step}</span>
+            <h3 className="mt-4 text-sm font-semibold text-ink uppercase tracking-wider">{item.title}</h3>
+            <p className="mt-2 text-xs leading-relaxed text-muted">{item.body}</p>
+          </div>
+          {index < roadmapSteps.length - 1 && (
+            <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
+              <div className="bg-porcelain border border-boundary rounded-full p-1 shadow-technical">
+                <ArrowRight size={12} className="text-moss" />
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function InstitutionalValidation({ title = "Proven Through Institutional Recognition." }: { title?: string }) {
   return (
     <>
       <div className="border-grid grid-cols-1 sm:grid-cols-3 bg-ink text-porcelain">
@@ -16,7 +39,7 @@ export function InstitutionalValidation() {
 
       <Section
         eyebrow="Trust & Authority"
-        title="Proven Through Institutional Recognition."
+        title={title}
         body="Chaorda's infrastructure and market thesis have been rigorously validated by Korea's leading venture capital and government innovation programs."
       >
         <div className="border-grid sm:grid-cols-2 lg:grid-cols-3">

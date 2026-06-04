@@ -79,25 +79,101 @@ export const ecosystemValidations: CardItem[] = [
     icon: Award
   },
   {
-    title: "National Innovation Portfolio",
-    body: "Selected for multiple government-funded innovation initiatives focused on commercializing next-generation AI infrastructure.",
+    title: "Government Innovation Programs",
+    body: "Supported through multiple national innovation, commercialization, and market expansion programs.",
     icon: Zap
   },
   {
-    title: "Global Market Support",
-    body: "Designated for national-scale global expansion support by the Korean Government for high-potential technology ventures.",
+    title: "Global Expansion Support",
+    body: "Selected for government-supported international market development initiatives.",
     icon: Globe
   },
   {
-    title: "Pre-TIPS Selection",
-    body: "Successfully completed the Pre-TIPS program, a prerequisite vetting phase for Korea's most competitive technology startups.",
+    title: "Pre-TIPS Recognition",
+    body: "Recognized for early-stage innovation and commercial potential through national startup support programs.",
     icon: ShieldCheck
   },
   {
-    title: "Accelerated Growth Track",
-    body: "Selected for and supported by Korea's most selective startup growth and commercialization programs.",
+    title: "Commercialization Programs",
+    body: "Selected for and supported by Korea's most selective startup growth and commercialization acceleration initiatives.",
     icon: Rocket
   }
+];
+
+export const proprietaryAssets: CardItem[] = [
+  {
+    title: "Proprietary AI Engines",
+    body: "Advanced internal technology stack developed by senior researchers for high-accuracy human-state prediction.",
+    icon: Brain
+  },
+  {
+    title: "Defensible IP",
+    body: "Proprietary algorithms and datasets focused on behavioral intelligence and emotional understanding.",
+    icon: LockKeyhole
+  },
+  {
+    title: "Monetizable Assets",
+    body: "Technological components designed with residual value and cross-industry licensing potential.",
+    icon: Database
+  },
+  {
+    title: "Enterprise Value",
+    body: "Long-term value creation through the integration of proprietary human context layers into global agent stacks.",
+    icon: Building2
+  }
+];
+
+export const riskMitigation: CardItem[] = [
+  {
+    title: "Milestone-Based Capital Deployment",
+    body: "Funding tied to measurable execution milestones to ensure disciplined resource allocation.",
+    icon: Zap
+  },
+  {
+    title: "Structured Governance",
+    body: "Regular institutional reporting and oversight to maintain transparency and operational alignment.",
+    icon: FileText
+  },
+  {
+    title: "Third-Party Validation",
+    body: "Subject to multiple independent investment and government selection processes for rigorous vetting.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Diversified Commercialization",
+    body: "Risk distribution across enterprise, healthcare, and platform opportunities.",
+    icon: Network
+  }
+];
+
+export const investmentStructures: CardItem[] = [
+  {
+    title: "Venture Debt",
+    body: "Structured lending options with downside-focused economics and clear repayment profiles.",
+    icon: Activity
+  },
+  {
+    title: "Convertible Instruments",
+    body: "Flexible participation in future value creation through standard institutional instruments.",
+    icon: Workflow
+  },
+  {
+    title: "Milestone-Based Drawdowns",
+    body: "Capital deployment schedules linked directly to operational progress and value markers.",
+    icon: Activity
+  },
+  {
+    title: "Strategic Partnerships",
+    body: "Long-term alignment through structured collaboration with institutional investors.",
+    icon: Network
+  }
+];
+
+export const roadmapSteps = [
+  { step: "01", title: "Government-Supported R&D", body: "Innovation funding and technical validation." },
+  { step: "02", title: "Commercialization", body: "B2B / B2G / Education / Healthcare." },
+  { step: "03", title: "Recurring Revenue Expansion", body: "Scale across enterprise platforms." },
+  { step: "04", title: "EBITDA-Positive Scale-Up", body: "Sustainable operating cash flow." }
 ];
 
 export const technologyLayers: CardItem[] = [
