@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/button-link";
 import { CardGrid } from "@/components/card-grid";
 import { CodeTabs } from "@/components/code-tabs";
@@ -22,34 +23,45 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="hero-radial px-6 pb-12 pt-24 sm:px-10 lg:px-16 lg:pb-16 lg:pt-32">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      {/* 1. Hero (Dark) */}
+      <section className="relative overflow-hidden px-6 pb-20 pt-32 sm:px-10 lg:px-16 lg:pb-32 lg:pt-48">
+        <div className="hero-radial absolute inset-0 -z-10 opacity-60" />
+        <div className="ambient-grid absolute inset-0 -z-10" />
+        
+        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-moss/80">
+            <p className="mb-6 text-[11px] font-bold uppercase tracking-[0.3em] text-amber">
               The Agent Infrastructure Company
             </p>
-            <h1 className="text-balance text-4xl font-semibold leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
-              The Missing Layer in the Agent Stack: <span className="text-amethyst">HUMAN EMOTION.</span>
+            <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-porcelain sm:text-6xl lg:text-7xl">
+              The Missing Layer in the Agent Stack: <span className="text-amber">HUMAN INTELLIGENCE.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              AI agents today can reason and act, but they are emotionally blind. Chaorda builds the human context layer—converting real-time multimodal signals into actionable state predictions.
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-porcelain/60 sm:text-xl">
+              AI agents today can reason and act, but they are contextually blind. Chaorda builds the human intelligence layer—converting real-time signals into actionable behavioral insights.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/investors">Review the thesis</ButtonLink>
-              <ButtonLink href="/infrastructure" variant="secondary">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <ButtonLink href="/investors" className="px-8 py-4">Review the thesis</ButtonLink>
+              <ButtonLink href="/infrastructure" variant="secondary" className="px-8 py-4 bg-white/5 border-white/10 text-white hover:bg-white/10">
                 Explore infrastructure
               </ButtonLink>
             </div>
           </div>
-          <div className="float-slow lg:scale-105">
-            <SignalField />
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="float-slow w-full max-w-[640px] lg:scale-110">
+              <SignalField />
+            </div>
           </div>
         </div>
       </section>
 
-      <InstitutionalValidation />
+      {/* 2. Validation (Dark) */}
+      <Section theme="dark" title="Validated by Korea's Innovation Ecosystem">
+        <InstitutionalValidation noHeader={true} />
+      </Section>
 
+      {/* 3. The Bottleneck (Light) - 2:1 Rhythm */}
       <Section
+        theme="light"
         eyebrow="The Bottleneck"
         title="Agents miss the human state."
         body="Interaction quality is the final frontier. We make frustration, trust, and uncertainty legible for the agent runtime."
@@ -57,15 +69,18 @@ export default function HomePage() {
         <HumanLayerProblem />
       </Section>
 
+      {/* 4. Infrastructure (Dark) */}
       <Section
-        className="bg-paper/40"
+        theme="dark"
         eyebrow="Infrastructure"
         title="Human Context Infrastructure."
       >
         <CardGrid items={coreCapabilities} />
       </Section>
 
+      {/* 5. Proof of Concept (Dark) */}
       <Section
+        theme="dark"
         eyebrow="Proof of Concept"
         title="From transaction to interaction."
         body="The platform detects preference drift and interaction friction, enabling agents to adjust strategy before a session fails."
@@ -73,8 +88,9 @@ export default function HomePage() {
         <BehaviorComparison />
       </Section>
 
+      {/* 6. Deployment (Light) - 2:1 Rhythm & Inversion */}
       <Section
-        className="bg-ink text-porcelain"
+        theme="light"
         eyebrow="Deployment"
         title="Infrastructure-grade SDK."
         body="Integrate human state predictions into your existing agent stack with <50ms latency."
@@ -82,7 +98,9 @@ export default function HomePage() {
         <CodeTabs />
       </Section>
 
+      {/* 7. Markets (Dark) */}
       <Section
+        theme="dark"
         eyebrow="Markets"
         title="High-stakes interactions."
         body="From enterprise customer experience to digital health, Chaorda powers agents that need to understand how humans feel."
@@ -90,25 +108,18 @@ export default function HomePage() {
         <CardGrid items={useCases.slice(0, 4)} columns="4" />
       </Section>
 
-      <div className="mx-auto max-w-7xl px-6 py-12 sm:px-10 lg:px-16 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <div>
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-moss/80">
-              Defensibility
-            </p>
-            <h2 className="text-balance text-2xl font-semibold leading-tight text-ink sm:text-3xl lg:text-4xl">
-              The Data Flywheel.
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
-              Consented interaction data compounds across industries, creating a proprietary moat of state-prediction accuracy.
-            </p>
-          </div>
-          <div className="grid gap-6">
-            <DataFlywheel />
-            <MetricStrip />
-          </div>
+      {/* 8. Defensibility (Dark) */}
+      <Section
+        theme="dark"
+        eyebrow="Defensibility"
+        title="The Data Flywheel."
+        body="Consented interaction data compounds across industries, creating a proprietary moat of state-prediction accuracy."
+      >
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start mt-8">
+          <DataFlywheel />
+          <MetricStrip />
         </div>
-      </div>
+      </Section>
     </>
   );
 }

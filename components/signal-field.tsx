@@ -143,7 +143,7 @@ export function SignalField() {
       m.lastX = m.x;
       m.lastY = m.y;
 
-      if (m.stableTime > 1000 && !stateRef.current.isAssembling) {
+      if (m.stableTime > 400 && !stateRef.current.isAssembling) {
         stateRef.current.isAssembling = true;
         const rawMsg = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
         stateRef.current.currentMessage = rawMsg.replace("{val}", Math.floor(Math.random() * 40 + 60).toString());
@@ -151,31 +151,31 @@ export function SignalField() {
         // Assign targets to nearby particles
         const msg = stateRef.current.currentMessage;
         const nearby = particles
-          .filter(p => Math.sqrt(Math.pow(p.x - m.x, 2) + Math.pow(p.y - m.y, 2)) < 250)
+          .filter(p => Math.sqrt(Math.pow(p.x - m.x, 2) + Math.pow(p.y - m.y, 2)) < 300)
           .sort((a, b) => Math.random() - 0.5);
 
         for (let i = 0; i < msg.length; i++) {
           if (nearby[i]) {
-            nearby[i].targetX = m.x - (msg.length * 3.5) + (i * 7);
+            nearby[i].targetX = m.x - (msg.length * 4) + (i * 8);
             nearby[i].targetY = m.y;
             nearby[i].char = msg[i];
           }
         }
       }
 
-      ctx.font = `200 ${fontSize - 2}px var(--font-mono)`;
+      ctx.font = `500 ${fontSize}px var(--font-mono)`;
       particles.forEach(p => {
-        p.update(height, m.x, m.y, stateRef.current.isAssembling, 0.15); 
+        p.update(height, m.x, m.y, stateRef.current.isAssembling, 0.2); 
         
         if (p.targetX !== null) {
           ctx.fillStyle = "#FFBF00"; 
-          ctx.shadowBlur = 4;
-          ctx.shadowColor = "rgba(255, 191, 0, 0.5)";
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = "rgba(255, 191, 0, 0.8)";
         } else if (p.isSpecial) {
-          ctx.fillStyle = "rgba(75, 0, 130, 0.8)"; 
+          ctx.fillStyle = "rgba(182, 107, 72, 0.9)"; 
           ctx.shadowBlur = 0;
         } else {
-          ctx.fillStyle = `rgba(253, 253, 251, ${p.opacity * 0.7})`;
+          ctx.fillStyle = `rgba(253, 253, 251, ${p.opacity * 0.9})`;
           ctx.shadowBlur = 0;
         }
         

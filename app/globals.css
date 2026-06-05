@@ -22,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  background: #fdfdfb;
-  color: #121212;
+  background: #0a0a0a;
+  color: #fdfdfb;
   font-family: var(--font-inter);
   text-rendering: optimizeLegibility;
 }
@@ -59,17 +59,17 @@ textarea {
 
 .ambient-grid {
   background-image:
-    linear-gradient(rgba(18, 18, 18, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 18, 18, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .hero-radial {
   background:
-    radial-gradient(circle at 18% 22%, rgba(75, 0, 130, 0.12), transparent 32%),
-    radial-gradient(circle at 85% 18%, rgba(255, 191, 0, 0.12), transparent 28%),
-    radial-gradient(circle at 72% 85%, rgba(110, 125, 86, 0.1), transparent 34%),
-    #fdfdfb;
+    radial-gradient(circle at 18% 22%, rgba(75, 0, 130, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 18%, rgba(255, 191, 0, 0.1), transparent 35%),
+    radial-gradient(circle at 72% 85%, rgba(110, 125, 86, 0.08), transparent 40%),
+    #0a0a0a;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -89,14 +89,19 @@ textarea {
 }
 
 .glass-panel {
-  background: rgba(253, 253, 251, 0.7);
-  border: 1px solid rgba(18, 18, 18, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
 }
 
 .dark-panel {
-  background: #121212;
+  background: #0a0a0a;
   color: #fdfdfb;
+}
+
+.light-panel {
+  background: #fdfdfb;
+  color: #0a0a0a;
 }
 
 .mono-table {
@@ -107,13 +112,13 @@ textarea {
 
 .border-grid {
   display: grid;
-  border-top: 1px solid #d8d3c7;
-  border-left: 1px solid #d8d3c7;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .border-grid > * {
-  border-right: 1px solid #d8d3c7;
-  border-bottom: 1px solid #d8d3c7;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .technical-label {
@@ -121,5 +126,6 @@ textarea {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #5f5a52;
+  color: rgba(255, 255, 255, 0.5);
 }
+

@@ -11,21 +11,21 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-boundary bg-porcelain/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-12">
         <Link
           href="/"
           className="focus-ring flex items-center gap-2.5 rounded-md"
           onClick={() => setOpen(false)}
         >
-          <span className="grid size-7 place-items-center rounded bg-ink text-[11px] font-bold text-porcelain">
+          <span className="grid size-8 place-items-center rounded bg-porcelain text-[12px] font-bold text-ink">
             C
           </span>
-          <span className="technical-label text-ink tracking-widest">Chaorda</span>
+          <span className="technical-label text-porcelain tracking-widest text-xs">Chaorda</span>
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden lg:block">
-          <ul className="flex items-center gap-0.5">
+          <ul className="flex items-center gap-1">
             {navItems.map((item) => {
               const active =
                 item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -33,10 +33,10 @@ export function SiteHeader() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`focus-ring rounded px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition ${
+                    className={`focus-ring rounded px-3 py-2 text-[10px] font-bold uppercase tracking-widest transition ${
                       active
-                        ? "bg-paper text-ink"
-                        : "text-muted hover:bg-paper hover:text-ink"
+                        ? "bg-white/10 text-white"
+                        : "text-porcelain/50 hover:bg-white/5 hover:text-white"
                     }`}
                   >
                     {item.label}
@@ -48,7 +48,7 @@ export function SiteHeader() {
         </nav>
 
         <button
-          className="focus-ring grid size-10 place-items-center rounded-md border border-ink/10 bg-porcelain lg:hidden"
+          className="focus-ring grid size-10 place-items-center rounded-md border border-white/10 bg-white/5 lg:hidden text-porcelain"
           type="button"
           aria-label={open ? "Close navigation" : "Open navigation"}
           onClick={() => setOpen((value) => !value)}
@@ -60,14 +60,14 @@ export function SiteHeader() {
       {open ? (
         <nav
           aria-label="Mobile navigation"
-          className="border-t border-ink/10 bg-porcelain px-6 py-5 lg:hidden"
+          className="border-t border-white/5 bg-ink px-6 py-6 lg:hidden"
         >
-          <ul className="grid gap-1">
+          <ul className="grid gap-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="focus-ring block rounded-md px-3 py-3 text-base text-ink hover:bg-paper"
+                  className="focus-ring block rounded-md px-4 py-3 text-base text-porcelain hover:bg-white/5"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

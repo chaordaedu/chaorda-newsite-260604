@@ -16,10 +16,10 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const styles = {
     primary:
-      "bg-ink text-porcelain hover:bg-graphite focus-visible:outline-amber",
+      "bg-porcelain text-ink hover:bg-white focus-visible:outline-amber",
     secondary:
-      "border border-boundary bg-porcelain text-ink hover:bg-paper focus-visible:outline-amber",
-    dark: "bg-porcelain text-ink hover:bg-paper focus-visible:outline-amber",
+      "border border-white/20 bg-transparent text-white hover:bg-white/5 focus-visible:outline-amber",
+    dark: "bg-ink text-porcelain hover:bg-graphite focus-visible:outline-amber",
     ghost: "border border-porcelain/20 bg-transparent text-porcelain hover:bg-porcelain/10 focus-visible:outline-amber"
   };
 
