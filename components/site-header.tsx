@@ -47,13 +47,6 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <Link
-          href="/investors"
-          className="focus-ring hidden rounded bg-ink px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-porcelain transition hover:bg-graphite lg:inline-flex"
-        >
-          Access
-        </Link>
-
         <button
           className="focus-ring grid size-10 place-items-center rounded-md border border-ink/10 bg-porcelain lg:hidden"
           type="button"
