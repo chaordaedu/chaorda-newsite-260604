@@ -18,26 +18,35 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Chaorda | Human Understanding Infrastructure",
+    default: "Chaorda | Human Intelligence Infrastructure",
     template: "%s | Chaorda"
   },
   description:
-    "Chaorda builds human understanding infrastructure for AI agents, starting with real-time emotional state prediction from consented multimodal interaction signals.",
-  metadataBase: new URL("https://chaorda.ai"),
+    "Chaorda develops AI systems that understand, predict, and optimize human behavior, emotion, and decision-making patterns. The infrastructure layer for Human Intelligence.",
+  metadataBase: new URL("https://chaorda.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Chaorda | Human Understanding Infrastructure",
+    title: "Chaorda | Human Intelligence Infrastructure",
     description:
-      "AI agents need to understand humans. Chaorda builds the human layer for adaptive AI agents.",
-    url: "https://chaorda.ai",
+      "AI Systems That Understand Human Behavior, Emotion, and Decision-Making",
+    url: "https://chaorda.com",
     siteName: "Chaorda",
-    type: "website"
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chaorda | Human Understanding Infrastructure",
+    title: "Chaorda | Human Intelligence Infrastructure",
     description:
-      "Human understanding infrastructure for AI agents."
-  }
+      "AI Systems That Understand Human Behavior, Emotion, and Decision-Making",
+    site: "@chaorda",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

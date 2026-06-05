@@ -11,9 +11,9 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Infrastructure",
+  title: "Human Intelligence Infrastructure Stack",
   description:
-    "The human context layer for AI agents: multimodal signal ingestion, state prediction, and adaptive runtime SDK."
+    "The technical architecture of Chaorda's human context layer: multimodal signal ingestion, behavioral state prediction, and adaptive runtime SDK."
 };
 
 export default function InfrastructurePage() {

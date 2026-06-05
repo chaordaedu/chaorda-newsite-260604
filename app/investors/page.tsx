@@ -9,9 +9,9 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Institutional Investors",
+  title: "Institutional Investor Thesis",
   description:
-    "Institutional investment thesis for Chaorda's human understanding infrastructure."
+    "Chaorda's institutional investment framework for Human Intelligence Infrastructure, featuring venture validation and risk-adjusted growth models."
 };
 
 export default function InvestorsPage() {
