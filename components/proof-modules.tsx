@@ -223,3 +223,31 @@ export function BehaviorComparison() {
     </div>
   );
 }
+
+export function LeadershipSection() {
+  const { teamMembers } = require("@/lib/content");
+  
+  return (
+    <div className="border-grid grid-cols-1 lg:grid-cols-3 bg-white/5">
+      {teamMembers.map((member: any) => (
+        <article
+          key={member.name}
+          className="p-8 transition-all hover:bg-white/10 border-white/5"
+        >
+          <p className="technical-label text-amber font-bold mb-1">{member.focus}</p>
+          <h3 className="text-xl font-semibold text-porcelain">{member.name}</h3>
+          <p className="technical-label text-[10px] opacity-40 mb-6">{member.role}</p>
+          
+          <p className="text-sm leading-relaxed opacity-70 mb-8 min-h-[100px]">
+            {member.bio}
+          </p>
+          
+          <div className="pt-6 border-t border-white/5">
+            <p className="technical-label text-[9px] opacity-30 uppercase tracking-widest">Education & Background</p>
+            <p className="mt-2 text-[11px] font-medium text-porcelain/60">{member.education}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { CardGrid } from "@/components/card-grid";
 import { CodeTabs } from "@/components/code-tabs";
-import { DataFlywheel } from "@/components/proof-modules";
+import { DataFlywheel, LeadershipSection } from "@/components/proof-modules";
 import { PageHero, Section } from "@/components/section";
 import {
   platformFeatures,
@@ -126,7 +126,17 @@ export default function InfrastructurePage() {
         </div>
       </Section>
 
-      {/* 7. Data Moat (Dark) */}
+      {/* 7. Leadership (Dark) */}
+      <Section
+        theme="dark"
+        eyebrow="Leadership"
+        title="Scientific & Strategic Governance."
+        body="Our leadership combines decades of pedagogical insight, advanced AI research, and global institutional strategy."
+      >
+        <LeadershipSection />
+      </Section>
+
+      {/* 8. Data Moat (Dark) */}
       <Section
         theme="dark"
         eyebrow="Data Moat"

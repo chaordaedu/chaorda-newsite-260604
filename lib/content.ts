@@ -364,3 +364,27 @@ export const faqs = [
       "Real-time emotional state prediction for AI agents, exposed through an adaptive runtime SDK."
   }
 ];
+
+export const teamMembers = [
+  {
+    name: "Chulho Bae",
+    role: "CEO / Founder",
+    bio: "Korea University. 16 years of Mathematics teaching and 20 years of Cultural/Musical industry experience. Specialized in translating human cognitive patterns and behavioral logic into mathematical frameworks for AI infrastructure.",
+    focus: "Behavioral Logic",
+    education: "Korea University, Daeil FLHS"
+  },
+  {
+    name: "Hyunsik Yang",
+    role: "CTO",
+    bio: "AI Scientist, SNU Computer Science. Expert in GPU server management (Samsung DS Course). Published SCIE-level research. Leads the development of real-time state prediction engines and high-performance data pipelines.",
+    focus: "AI Infrastructure",
+    education: "Seoul National University"
+  },
+  {
+    name: "Jungtae Lee",
+    role: "CSO",
+    bio: "Georgetown MBA, Korea University. Former Fidelity HQ, Microsoft APAC, Samsung Electronics, and iHeart Radio. Focuses on global strategic partnerships and market entry for human-centric interaction technologies.",
+    focus: "Global Strategy",
+    education: "Georgetown MBA, Korea University"
+  }
+];
